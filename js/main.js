@@ -1,3 +1,4 @@
+// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -13,11 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: target.offsetTop - 80,
+                target.scrollIntoView({
                     behavior: 'smooth'
                 });
                 // Close mobile menu if open
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
             
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             successMessage.innerHTML = `
                 <i class="fas fa-check-circle"></i>
                 <h3>Message Sent!</h3>
-                <p>Thank you for reaching out, ${formData.name}. We'll get back to you soon.</p>
+                <p>Thank you for reaching out, ${formData.name}. I'll get back to you soon.</p>
                 <button class="button" id="resetForm">Send Another Message</button>
             `;
             
@@ -76,21 +75,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Newsletter form handling
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            if (emailInput.value) {
-                // Here you would typically send the data to a server
-                alert('Thank you for subscribing to our newsletter!');
-                emailInput.value = '';
-            }
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+        const imgObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    if (src) {
+                        img.src = src;
+                        img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imgObserver.observe(img);
         });
     }
 
-    // Animation on scroll
+    // Add animation on scroll
     const animateElements = document.querySelectorAll('.animate-on-scroll');
     
     if (animateElements.length > 0 && 'IntersectionObserver' in window) {
@@ -106,41 +112,4 @@ document.addEventListener('DOMContentLoaded', function() {
             animationObserver.observe(element);
         });
     }
-
-    // Course card hover effect
-    const courseCards = document.querySelectorAll('.course-card');
-    courseCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.querySelector('.course-image img').style.transform = 'scale(1.05)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.querySelector('.course-image img').style.transform = 'scale(1)';
-        });
-    });
-
-    // Active navigation highlighting
-    function highlightNav() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav ul li a');
-        
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', highlightNav);
 });

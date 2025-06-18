@@ -3,51 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechDevOps - DevOps Learning & Professional Services</title>
+    <title>TechDevOps - Professional DevOps Services | Cloud & Infrastructure Solutions</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Learn DevOps skills with hands-on courses and labs. Expert training in CI/CD, Kubernetes, AWS, Azure, Terraform, and more.">
-    <meta name="keywords" content="DevOps training, DevOps courses, Kubernetes, Docker, CI/CD, AWS, Azure, Terraform, Infrastructure as Code">
+    <meta name="description" content="Expert DevOps services including CI/CD implementation, infrastructure as code, cloud migration, and Kubernetes management. Streamline your development workflow.">
+    <meta name="keywords" content="DevOps, CI/CD, AWS, Azure, Kubernetes, Terraform, Infrastructure as Code, Cloud Migration, DevSecOps">
     <meta name="author" content="TechDevOps">
     
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="TechDevOps - DevOps Learning & Professional Services">
-    <meta property="og:description" content="Learn DevOps skills with hands-on courses and labs. Expert training in CI/CD, Kubernetes, AWS, Azure, Terraform, and more.">
+    <meta property="og:title" content="TechDevOps - Professional DevOps Services">
+    <meta property="og:description" content="Expert DevOps services including CI/CD implementation, infrastructure as code, cloud migration, and Kubernetes management.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://techdevops.co.uk">
     <meta property="og:image" content="https://techdevops.co.uk/images/og-image.jpg">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TechDevOps - DevOps Learning & Professional Services">
-    <meta name="twitter:description" content="Learn DevOps skills with hands-on courses and labs. Expert training in CI/CD, Kubernetes, AWS, Azure, Terraform, and more.">
+    <meta name="twitter:title" content="TechDevOps - Professional DevOps Services">
+    <meta name="twitter:description" content="Expert DevOps services for modern businesses. Streamline your development workflow and optimize infrastructure.">
     
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     
-    <!-- Stylesheets -->
+    <!-- Stylesheets with preload for critical CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
+        "@type": "ProfessionalService",
         "name": "TechDevOps",
         "url": "https://techdevops.co.uk",
         "logo": "https://techdevops.co.uk/images/logo.png",
-        "description": "DevOps learning platform offering courses in CI/CD, Kubernetes, AWS, Azure, Terraform, and more.",
+        "description": "Professional DevOps services including CI/CD implementation, infrastructure as code, cloud migration, and Kubernetes management.",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "UK"
         },
         "contactPoint": {
             "@type": "ContactPoint",
+            "telephone": "",
             "email": "info@techdevops.co.uk",
             "contactType": "customer service"
         },
@@ -61,18 +63,16 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="images/logo.png" alt="TechDevOps Logo">
-                <h1>Tech<span>DevOps</span></h1>
-            </div>
+            <h1>TechDevOps</h1>
             <nav>
                 <ul>
-                    <li><a href="#courses" class="active">Courses</a></li>
-                    <li><a href="#learning-paths">Learning Paths</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#articles">Articles</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#contact" class="nav-button">Get Started</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-btn">
@@ -83,331 +83,255 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Master DevOps Skills with Hands-On Learning</h1>
-                <p>Learn in-demand DevOps tools and practices with practical labs and expert guidance. Advance your career with our comprehensive courses.</p>
-                <div class="hero-buttons">
-                    <a href="#courses" class="cta-button">Explore Courses</a>
-                    <a href="#learning-paths" class="button button-secondary">View Learning Paths</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1607743386760-88ac62b89b8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="DevOps Learning Platform">
-            </div>
+            <h2>DevOps Solutions for Modern Businesses</h2>
+            <p>Streamlining development workflows and optimizing infrastructure</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose TechDevOps</h2>
-                <p>Our platform offers everything you need to master DevOps skills and advance your career</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Hands-On Labs</h3>
-                    <p>Practice in real environments with our interactive labs. Apply what you learn immediately with guided exercises.</p>
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to TechDevOps, your partner for implementing efficient DevOps practices. With expertise in continuous integration, deployment automation, and infrastructure management, I help businesses accelerate their software delivery while maintaining reliability.</p>
+                    <p>As a DevOps engineer with extensive experience in cloud technologies and automation, I specialize in bridging the gap between development and operations to create seamless, efficient workflows that drive business success.</p>
                 </div>
-                <div class="feature-card animate-on-scroll delay-100">
-                    <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Industry Certifications</h3>
-                    <p>Prepare for top DevOps certifications with our specialized courses and practice exams.</p>
-                </div>
-                <div class="feature-card animate-on-scroll delay-200">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3>Expert Instruction</h3>
-                    <p>Learn from experienced DevOps professionals with real-world expertise in leading organizations.</p>
-                </div>
-                <div class="feature-card animate-on-scroll delay-300">
-                    <div class="feature-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Structured Learning Paths</h3>
-                    <p>Follow clear learning paths designed to take you from beginner to expert in your chosen specialization.</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="TechDevOps Professional" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="courses" class="courses">
+    <section id="experience" class="experience">
         <div class="container">
-            <div class="section-title">
-                <h2>Popular DevOps Courses</h2>
-                <p>Master the most in-demand DevOps tools and technologies</p>
-            </div>
-            <div class="course-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Kubernetes Course">
-                        <span class="course-level">Intermediate</span>
-                    </div>
-                    <div class="course-content">
-                        <h3>Kubernetes Fundamentals</h3>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 12 Hours</span>
-                            <span><i class="far fa-user"></i> 2,500+ Students</span>
-                        </div>
-                        <p class="course-description">Learn to deploy, manage, and scale containerized applications with Kubernetes.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$99.99</span>
-                            <a href="#" class="button">Enroll Now</a>
-                        </div>
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior DevOps Engineer</h3>
+                        <p>Leading cloud infrastructure management and CI/CD pipeline optimization for enterprise applications. Implementing Kubernetes-based microservices architecture and infrastructure as code practices.</p>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1607743386760-88ac62b89b8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="CI/CD Course">
-                        <span class="course-level">Beginner</span>
-                    </div>
-                    <div class="course-content">
-                        <h3>CI/CD Pipeline Mastery</h3>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 10 Hours</span>
-                            <span><i class="far fa-user"></i> 1,800+ Students</span>
-                        </div>
-                        <p class="course-description">Build robust CI/CD pipelines using Jenkins, GitHub Actions, and GitLab CI.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$89.99</span>
-                            <a href="#" class="button">Enroll Now</a>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>DevOps Engineer</h3>
+                        <p>Designed and implemented CI/CD pipelines using Jenkins and GitHub Actions. Managed AWS infrastructure using Terraform and CloudFormation. Implemented monitoring solutions with Prometheus and Grafana.</p>
                     </div>
                 </div>
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Terraform Course">
-                        <span class="course-level">Advanced</span>
-                    </div>
-                    <div class="course-content">
-                        <h3>Terraform & Infrastructure as Code</h3>
-                        <div class="course-meta">
-                            <span><i class="far fa-clock"></i> 15 Hours</span>
-                            <span><i class="far fa-user"></i> 1,200+ Students</span>
-                        </div>
-                        <p class="course-description">Master infrastructure as code using Terraform across multiple cloud providers.</p>
-                        <div class="course-footer">
-                            <span class="course-price">$129.99</span>
-                            <a href="#" class="button">Enroll Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="view-all" style="text-align: center; margin-top: 40px;">
-                <a href="#" class="button">View All Courses</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="learning-paths" class="learning-paths">
-        <div class="container">
-            <div class="section-title">
-                <h2>DevOps Learning Paths</h2>
-                <p>Structured learning journeys to help you achieve your career goals</p>
-            </div>
-            <div class="path-cards">
-                <div class="path-card">
-                    <div class="path-header">
-                        <h3>DevOps Engineer Path</h3>
-                        <p>Complete DevOps toolchain mastery</p>
-                    </div>
-                    <div class="path-content">
-                        <ul class="path-features">
-                            <li><i class="fas fa-check-circle"></i> CI/CD Pipeline Implementation</li>
-                            <li><i class="fas fa-check-circle"></i> Container Orchestration with Kubernetes</li>
-                            <li><i class="fas fa-check-circle"></i> Infrastructure as Code</li>
-                            <li><i class="fas fa-check-circle"></i> Cloud Platform Management</li>
-                            <li><i class="fas fa-check-circle"></i> Monitoring & Observability</li>
-                        </ul>
-                        <div class="path-footer">
-                            <a href="#" class="button">Start This Path</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="path-card">
-                    <div class="path-header">
-                        <h3>Cloud Architect Path</h3>
-                        <p>Design and implement cloud solutions</p>
-                    </div>
-                    <div class="path-content">
-                        <ul class="path-features">
-                            <li><i class="fas fa-check-circle"></i> Multi-Cloud Architecture</li>
-                            <li><i class="fas fa-check-circle"></i> Cloud Security & Compliance</li>
-                            <li><i class="fas fa-check-circle"></i> Serverless Computing</li>
-                            <li><i class="fas fa-check-circle"></i> High Availability Design</li>
-                            <li><i class="fas fa-check-circle"></i> Cost Optimization</li>
-                        </ul>
-                        <div class="path-footer">
-                            <a href="#" class="button">Start This Path</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="path-card">
-                    <div class="path-header">
-                        <h3>SRE Specialist Path</h3>
-                        <p>Reliability engineering expertise</p>
-                    </div>
-                    <div class="path-content">
-                        <ul class="path-features">
-                            <li><i class="fas fa-check-circle"></i> Service Level Objectives</li>
-                            <li><i class="fas fa-check-circle"></i> Advanced Monitoring</li>
-                            <li><i class="fas fa-check-circle"></i> Incident Response</li>
-                            <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
-                            <li><i class="fas fa-check-circle"></i> Chaos Engineering</li>
-                        </ul>
-                        <div class="path-footer">
-                            <a href="#" class="button">Start This Path</a>
-                        </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Systems Administrator</h3>
+                        <p>Managed on-premises and cloud infrastructure. Implemented automation using Ansible and Bash scripting. Supported development teams with deployment and infrastructure needs.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="stats">
+    <section id="services" class="services">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>15,000+</h3>
-                    <p>Students</p>
+            <h2>Services</h2>
+            <div class="service-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>CI/CD Implementation</h3>
+                    <p>Setting up robust continuous integration and deployment pipelines using Jenkins, GitHub Actions, GitLab CI, and other modern tools.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Courses</p>
+                <div class="service-card animate-on-scroll delay-100">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Infrastructure as Code</h3>
+                    <p>Managing infrastructure through code for consistency and reliability using Terraform, CloudFormation, and Ansible.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>200+</h3>
-                    <p>Hands-on Labs</p>
+                <div class="service-card animate-on-scroll delay-200">
+                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Migration</h3>
+                    <p>Helping businesses move to cloud platforms securely and efficiently, with expertise in AWS, Azure, and GCP.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>95%</h3>
-                    <p>Satisfaction Rate</p>
+                <div class="service-card animate-on-scroll delay-300">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Monitoring & Observability</h3>
+                    <p>Implementing comprehensive monitoring solutions using Prometheus, Grafana, ELK stack, and other modern observability tools.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-400">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>DevSecOps</h3>
+                    <p>Integrating security practices into the DevOps lifecycle, ensuring secure infrastructure and applications.</p>
+                </div>
+                <div class="service-card animate-on-scroll delay-500">
+                    <div class="service-icon"><i class="fas fa-server"></i></div>
+                    <h3>Kubernetes Management</h3>
+                    <p>Setting up, managing, and optimizing Kubernetes clusters for container orchestration and microservices.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials">
+    <section id="skills" class="skills">
         <div class="container">
-            <div class="section-title">
-                <h2>What Our Students Say</h2>
-                <p>Hear from professionals who have advanced their careers with our courses</p>
+            <h2>Technical Skills</h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <ul class="skills-list">
+                        <li>AWS</li>
+                        <li>Azure</li>
+                        <li>GCP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>CI/CD</h3>
+                    <ul class="skills-list">
+                        <li>Jenkins</li>
+                        <li>GitHub Actions</li>
+                        <li>GitLab CI</li>
+                        <li>ArgoCD</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Infrastructure</h3>
+                    <ul class="skills-list">
+                        <li>Terraform</li>
+                        <li>Ansible</li>
+                        <li>CloudFormation</li>
+                        <li>Pulumi</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Containers</h3>
+                    <ul class="skills-list">
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Helm</li>
+                        <li>Istio</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Monitoring</h3>
+                    <ul class="skills-list">
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Datadog</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>Go</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The hands-on labs were incredibly valuable. I was able to apply what I learned immediately in my job, which helped me secure a promotion within months."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith">
-                        <div class="author-info">
-                            <h4>John Smith</h4>
-                            <p>DevOps Engineer at Tech Solutions</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The Kubernetes course was exactly what I needed to transition from a traditional sysadmin role to a cloud-native position. The structured learning path made it easy to follow."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Cloud Engineer at Global Services</p>
-                        </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>GitHub Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Infrastructure Automation</h3>
+                    <p>A collection of Terraform modules and Ansible playbooks for automating cloud infrastructure deployment.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ThopuriSeetaramaiah" target="_blank" class="button">View on GitHub <i class="fab fa-github"></i></a>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"I passed my AWS certification on the first try thanks to the comprehensive preparation materials. The practice exams were particularly helpful in identifying my weak areas."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen">
-                        <div class="author-info">
-                            <h4>Michael Chen</h4>
-                            <p>Solutions Architect at Cloud Innovations</p>
-                        </div>
+                <div class="project-card">
+                    <h3>Kubernetes Deployment Templates</h3>
+                    <p>Ready-to-use Kubernetes manifests and Helm charts for common application deployment patterns.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ThopuriSeetaramaiah" target="_blank" class="button">View on GitHub <i class="fab fa-github"></i></a>
                     </div>
                 </div>
+                <div class="project-card">
+                    <h3>CI/CD Pipeline Examples</h3>
+                    <p>Example configurations for various CI/CD tools including Jenkins, GitHub Actions, and GitLab CI.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ThopuriSeetaramaiah" target="_blank" class="button">View on GitHub <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="https://github.com/ThopuriSeetaramaiah" target="_blank" class="button">View All Projects <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2>Technical Articles</h2>
+            <div class="article-grid">
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="DevOps Code" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3>DevOps Best Practices</h3>
+                        <p>Exploring modern DevOps practices and how they can transform your development workflow.</p>
+                        <a href="https://medium.com/@sthopuri4332" target="_blank" class="read-more">Read on Medium <i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Kubernetes Logo" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3>Kubernetes for Beginners</h3>
+                        <p>A comprehensive guide to getting started with Kubernetes container orchestration.</p>
+                        <a href="https://medium.com/@sthopuri4332" target="_blank" class="read-more">Read on Medium <i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="https://medium.com/@sthopuri4332" target="_blank" class="button">View All Articles <i class="fab fa-medium"></i></a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-title">
-                <h2>Get in Touch</h2>
-                <p>Have questions about our courses or need custom training for your team?</p>
+            <h2>Contact</h2>
+            <p>Interested in working together? Reach out to discuss how TechDevOps can help your business.</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:info@techdevops.co.uk">info@techdevops.co.uk</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub: <a href="https://github.com/ThopuriSeetaramaiah" target="_blank">ThopuriSeetaramaiah</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-medium"></i>
+                    <p>Medium: <a href="https://medium.com/@sthopuri4332" target="_blank">@sthopuri4332</a></p>
+                </div>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email Us</h3>
-                            <p><a href="mailto:info@techdevops.co.uk">info@techdevops.co.uk</a></p>
-                        </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>United Kingdom</p>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/ThopuriSeetaramaiah" target="_blank">ThopuriSeetaramaiah</a></p>
-                        </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-medium"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Medium</h3>
-                            <p><a href="https://medium.com/@sthopuri4332" target="_blank">@sthopuri4332</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -415,46 +339,26 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">
-                        <img src="images/logo-white.png" alt="TechDevOps Logo">
-                        <h3>Tech<span>DevOps</span></h3>
-                    </div>
-                    <p>Providing high-quality DevOps education and training to help professionals advance their careers and organizations improve their development practices.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-medium"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                <div class="footer-logo">
+                    <h3>TechDevOps</h3>
+                    <p>Professional DevOps Services</p>
                 </div>
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#courses">Courses</a></li>
-                        <li><a href="#learning-paths">Learning Paths</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Courses</h4>
-                    <ul>
-                        <li><a href="#">Kubernetes</a></li>
-                        <li><a href="#">CI/CD Pipelines</a></li>
-                        <li><a href="#">Terraform</a></li>
-                        <li><a href="#">AWS Certification</a></li>
-                        <li><a href="#">Docker</a></li>
-                    </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Subscribe</h4>
-                    <p>Stay updated with our latest courses and DevOps news</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address">
-                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                    </form>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://github.com/ThopuriSeetaramaiah" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://medium.com/@sthopuri4332" target="_blank"><i class="fab fa-medium"></i></a>
+                        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -465,5 +369,14 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    
+    <!-- Google Analytics (replace UA-XXXXXXXX-X with your actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </body>
 </html>
