@@ -541,6 +541,45 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Success message styling */
+.success-message {
+    text-align: center;
+    padding: 30px;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.success-message p {
+    margin-bottom: 20px;
+}
+
 /* Responsive styles */
 @media (max-width: 992px) {
     .about-content {

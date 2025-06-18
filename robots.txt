@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://techdevops.co.uk/sitemap.xml
