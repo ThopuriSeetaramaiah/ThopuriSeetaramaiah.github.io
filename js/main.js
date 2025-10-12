@@ -31,46 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Here you would typically send the data to a server
-            // For now, we'll just show a success message
-            
-            // Show success message
-            const formContainer = contactForm.parentElement;
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.innerHTML = `
-                <i class="fas fa-check-circle"></i>
-                <h3>Message Sent!</h3>
-                <p>Thank you for reaching out, ${formData.name}. I'll get back to you soon.</p>
-                <button class="button" id="resetForm">Send Another Message</button>
-            `;
-            
-            // Hide form and show success message
-            contactForm.style.display = 'none';
-            formContainer.appendChild(successMessage);
-            
-            // Add event listener to reset button
-            document.getElementById('resetForm').addEventListener('click', function() {
-                contactForm.reset();
-                contactForm.style.display = 'block';
-                successMessage.remove();
-            });
-            
-            // Analytics event tracking
-            if (typeof gtag === 'function') {
-                gtag('event', 'form_submission', {
-                    'event_category': 'Contact',
-                    'event_label': 'Contact Form'
-                });
+            // Let the form submit naturally to Formspree
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            if (submitButton) {
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
             }
         });
     }
